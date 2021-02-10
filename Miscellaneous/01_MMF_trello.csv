@@ -1,0 +1,15 @@
+Card Name
+Base Component
+Get ticket holder name and check its not blank
+Get ticket holder age and check it is an integer that is more than or equal to 12 and less than 130
+Work out ticket price based on age
+Ask user what snacks they would like (and calculate the cost of snacks)
+Ask user for payment method and work out surcharge if credit card is chosen
+Work out total cost (ie: ticket + snacks inc surcharge if applicable)
+Calculate profit for ticket that has been sold (including snacks)
+Add tickets details to list so users can keep track of sales
+Loop ticket sales code until exit code is received OR ticket sales reach 150 seats
+check that seats sold does not exceed 150 (create loop and keep track of seat numbers)
+Keep track of amount of snacks required (ie: how many of each type of snack has been sold with tickets)
+Write data to file
+Instructions (should only display if users request it at start of program)
