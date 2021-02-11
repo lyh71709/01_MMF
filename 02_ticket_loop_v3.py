@@ -10,7 +10,7 @@ while name != "xxx" and count < MAX_TICKETS:
 
     # Makes sure there is no plural when there is 1 ticket left
     if MAX_TICKETS - count == 1:
-        print("You have 1 seat left")
+        print("There is 1 seat left")
     else:
         print("You have {} seats left".format(MAX_TICKETS - count))
 
