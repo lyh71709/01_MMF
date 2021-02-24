@@ -13,7 +13,7 @@ def string_checker(choice, options):
             is_valid = "yes"
             break
 
-        # if the chosen snack is not valid, set snack_ok to no
+        # if the chosen snack is not valid, set is_valid to no
         else:
             is_valid = "no"
 
