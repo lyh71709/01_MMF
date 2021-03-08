@@ -45,6 +45,9 @@ yes_no = [
     ["yes", "y"],
     ["no", "n"]]
 
+# holds snack order fpr a single user
+snack_order = []
+
 check_snack = "invalid choice"
 while check_snack == "invalid choice":
     want_snack = input("Do you want to order snacks? ").lower()
@@ -55,6 +58,8 @@ if check_snack == "Yes":
 
     desired_snack = ""
     while desired_snack != "xxx":
+
+        snack_row = []
         # ask user for desired snack and put it in lowercase
         desired_snack = input("Snack: ").lower()
 
@@ -80,6 +85,9 @@ if check_snack == "Yes":
             print("Sorry - we have a four snack limit")
             snack_choice = "invalid choice"
 
+        snack_row.append(amount)
+        snack_row.append(snack_choice)
+
         # add snack and amount to list
         amount_snack = "{} {}".format(amount, snack_choice)
 
@@ -96,5 +104,7 @@ else:
 
     for item in snack_order:
         print(item)
+
+    print(snack_order)
 
 
