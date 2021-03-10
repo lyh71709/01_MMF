@@ -20,29 +20,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="00_MMF_base_v1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/00_MMF_base_v1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-              <folding>
-                <element signature="e#104#290#0" expanded="false" />
-                <element signature="e#346#666#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="00_MMF_base_v2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/00_MMF_base_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
+            <state relative-caret-position="99">
+              <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
               <folding>
                 <element signature="e#20#29#0" expanded="true" />
-                <element signature="e#128#315#0" expanded="false" />
-                <element signature="e#371#691#0" expanded="false" />
-                <element signature="e#1084#1558#0" expanded="false" />
+                <element signature="e#121#374#0" expanded="false" />
+                <element signature="e#430#750#0" expanded="false" />
+                <element signature="e#1145#1655#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -61,7 +48,7 @@
       <file leaf-file-name="06_string_checker_v7.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/06_string_checker_v7.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
+            <state relative-caret-position="527">
               <caret line="111" column="31" selection-start-line="111" selection-start-column="31" selection-end-line="111" selection-end-column="31" />
               <folding>
                 <element signature="e#74#688#0" expanded="false" />
@@ -142,7 +129,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -164,6 +150,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,24 +163,7 @@
       <recent name="C:\Users\lyh71709\OneDrive - Massey High School\Old School Files\Documents\COM_201\01_Programming\01_MMF" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.06_string_checker_v7">
-    <configuration default="false" name="06_string_checker_v3" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="01_MMF" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/06_string_checker_v3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.00_MMF_base_v2">
     <configuration default="false" name="06_string_checker_v4" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -258,6 +228,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="01_MMF" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/06_string_checker_v7.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="00_MMF_base_v2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="01_MMF" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/00_MMF_base_v2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -397,19 +384,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.06_string_checker_v3" />
-      <item index="1" class="java.lang.String" itemvalue="Python.06_string_checker_v4" />
-      <item index="2" class="java.lang.String" itemvalue="Python.07_string_analyser" />
-      <item index="3" class="java.lang.String" itemvalue="Python.06_string_checker_v5" />
-      <item index="4" class="java.lang.String" itemvalue="Python.06_string_checker_v7" />
+      <item index="0" class="java.lang.String" itemvalue="Python.06_string_checker_v4" />
+      <item index="1" class="java.lang.String" itemvalue="Python.07_string_analyser" />
+      <item index="2" class="java.lang.String" itemvalue="Python.06_string_checker_v5" />
+      <item index="3" class="java.lang.String" itemvalue="Python.06_string_checker_v7" />
+      <item index="4" class="java.lang.String" itemvalue="Python.00_MMF_base_v2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.06_string_checker_v7" />
-        <item index="1" class="java.lang.String" itemvalue="Python.06_string_checker_v5" />
-        <item index="2" class="java.lang.String" itemvalue="Python.07_string_analyser" />
-        <item index="3" class="java.lang.String" itemvalue="Python.06_string_checker_v4" />
-        <item index="4" class="java.lang.String" itemvalue="Python.06_string_checker_v3" />
+        <item index="0" class="java.lang.String" itemvalue="Python.00_MMF_base_v2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.06_string_checker_v7" />
+        <item index="2" class="java.lang.String" itemvalue="Python.06_string_checker_v5" />
+        <item index="3" class="java.lang.String" itemvalue="Python.07_string_analyser" />
+        <item index="4" class="java.lang.String" itemvalue="Python.06_string_checker_v4" />
       </list>
     </recent_temporary>
   </component>
@@ -435,7 +422,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50422835" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5063425" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -481,7 +468,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -501,7 +488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -548,7 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,7 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,7 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,7 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,7 +824,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/06_string_checker_v7.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
+        <state relative-caret-position="527">
           <caret line="111" column="31" selection-start-line="111" selection-start-column="31" selection-end-line="111" selection-end-column="31" />
           <folding>
             <element signature="e#74#688#0" expanded="false" />
@@ -865,13 +847,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/00_MMF_base_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
+        <state relative-caret-position="99">
+          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
           <folding>
             <element signature="e#20#29#0" expanded="true" />
-            <element signature="e#128#315#0" expanded="false" />
-            <element signature="e#371#691#0" expanded="false" />
-            <element signature="e#1084#1558#0" expanded="false" />
+            <element signature="e#121#374#0" expanded="false" />
+            <element signature="e#430#750#0" expanded="false" />
+            <element signature="e#1145#1655#0" expanded="false" />
           </folding>
         </state>
       </provider>

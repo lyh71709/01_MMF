@@ -5,8 +5,9 @@ import pandas
 # functions go here
 
 # not_blank function here
-def not_blank(question, error):
+def not_blank(question):
     valid = False
+    error = "Sorry - this can't be blank, please enter your name"
 
     while not valid:
         response = input(question)
@@ -47,20 +48,20 @@ def check_tickets(ticket_sold, ticket_limit):
 
     return ""
 
+
 # get_ticket_price function here
 def get_ticket_price():
+
     # Get age (between 12 and 130)
     age = int_check("How old are you? ")
 
     # check valid age
     if age < 12:
-        print("Sorry you are too young for this movie")
-        print()
-        continue
+        print("Sorry you are too young for this movie\n")
+        return "invalid ticket price"
     elif age > 130:
-        print("That is very old - it looks like a mistake")
-        print()
-        continue
+        print("That is very old - it looks like a mistake\n")
+        return "invalid ticket price"
 
     # Calculate ticket price
     if age < 16:
@@ -70,53 +71,68 @@ def get_ticket_price():
     else:
         ticket_price = 6.5
 
+    return ticket_price
 
-# Main rountine
+# Main routine
 
-#Set up dictionaries / lists needed to hold data
+# Set up dictionaries / lists needed to hold data
 MAX_TICKETS = 5
 name = ""
 ticket_count = 0
 ticket_sales = 0
 
-# Ask user for if they have used the program before and show how to use it
+# Initialise lists (to make data-frame in due course)
+all_names = []
+all_tickets = []
 
-# Loop to get ticket details
+# Data Frame Dictionary
+movie_data_dict = {
+    'Name': all_names,
+    'Ticket': all_tickets
+}
 
 # Get name (can't be blank)
 while name != "xxx" and ticket_count < MAX_TICKETS:
 
+    check_tickets(ticket_count, MAX_TICKETS)
+
     # Get details
-    name = not_blank("What is your name? ", "Sorry - this can't be blank, please enter your name")
+    name = not_blank("What is your name? ")
     # Makes xxx not ticket_count as a ticket sold
     if name == "xxx":
-        print()
         break
 
-
-
-    print("{} : ${:.2f} \n".format(name, ticket_price))
+    # Get ticket price based on age
+    ticket_price = get_ticket_price()
+    # If age is invalid, restart loop (and get name again)
+    if ticket_price == "invalid ticket price":
+        continue
 
     ticket_count += 1
     ticket_sales += ticket_price
 
+    # Add name and ticket price to lists
+    all_names.append(name)
+    all_tickets.append(ticket_price)
+
+    # Get snacks
+
+    # Get payment method (ie: work out if surcharge is needed
+
+# End of tickets / snacks / payment loop
+
+# Print details
+movie_frame = pandas.DataFrame(movie_data_dict)
+print()
+print(movie_frame)
+
 # Calculate ticket profit
 ticket_profit = ticket_sales - (5 * ticket_count)
-
+print("\nProfit from Tickets: ${:.2f}".format(ticket_profit))
 
 # Gives feedback after loop has ended
 if ticket_count == MAX_TICKETS:
     print("You have sold all the available tickets!")
-    print("Profit from Tickets: ${:.2f}".format(ticket_profit))
 else:
     print("You have sold {} tickets. \n"
           "There are {} places still available".format(ticket_count, MAX_TICKETS - ticket_count))
-
-    # Loop to ask for snacks
-
-    # Calculate snack price
-
-    # Ask for payment method (and apply surcharge if needed)
-
-# Output data to text file
-
