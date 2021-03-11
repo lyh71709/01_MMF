@@ -48,6 +48,7 @@ def check_tickets(ticket_sold, ticket_limit):
 
     return ""
 
+
 # get_ticket_price function here
 def get_ticket_price():
 
