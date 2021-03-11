@@ -4,6 +4,7 @@ import pandas
 
 # functions go here
 
+
 # not_blank function here
 def not_blank(question):
     valid = False
@@ -17,6 +18,7 @@ def not_blank(question):
         else:
             print(error)
             print()
+
 
 # int_check function here
 def int_check(question):
@@ -36,6 +38,7 @@ def int_check(question):
 
         except ValueError:
             print(error)
+
 
 # check_tickets function here
 def check_tickets(ticket_sold, ticket_limit):

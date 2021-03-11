@@ -23,47 +23,33 @@
       <file leaf-file-name="00_MMF_base_v3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/00_MMF_base_v3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+            <state relative-caret-position="214">
+              <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="129" selection-end-column="18" />
               <folding>
-                <element signature="e#121#374#0" expanded="false" />
-                <element signature="e#430#750#0" expanded="false" />
-                <element signature="e#831#1080#0" expanded="false" />
-                <element signature="e#1145#1655#0" expanded="false" />
+                <element signature="e#122#376#0" expanded="false" />
+                <element signature="e#432#753#0" expanded="false" />
+                <element signature="e#834#1083#0" expanded="false" />
+                <element signature="e#1148#1658#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="07_string_analyser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/07_string_analyser.py">
+      <file leaf-file-name="08_snack_list_v2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/08_snack_list_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="06_string_checker_v7.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/06_string_checker_v7.py">
+      <file leaf-file-name="11_tickets_snacks_v1.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/11_tickets_snacks_v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-              <folding>
-                <element signature="e#74#688#0" expanded="false" />
-                <element signature="e#732#2613#0" expanded="false" />
-                <element signature="e#2661#2697#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="08_snack_list.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/08_snack_list.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="425">
+              <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -105,8 +91,11 @@
         <option value="$PROJECT_DIR$/06_string_checker_v6.py" />
         <option value="$PROJECT_DIR$/06_string_checker_v7.py" />
         <option value="$PROJECT_DIR$/00_MMF_base_v2.py" />
-        <option value="$PROJECT_DIR$/00_MMF_base_v3.py" />
         <option value="$PROJECT_DIR$/08_snack_list.py" />
+        <option value="$PROJECT_DIR$/08_snack_list_v1.py" />
+        <option value="$PROJECT_DIR$/00_MMF_base_v3.py" />
+        <option value="$PROJECT_DIR$/08_snack_list_v2.py" />
+        <option value="$PROJECT_DIR$/11_tickets_snacks_v1.py" />
       </list>
     </option>
   </component>
@@ -141,7 +130,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -163,6 +151,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,7 +164,7 @@
       <recent name="C:\Users\lyh71709\OneDrive - Massey High School\Old School Files\Documents\COM_201\01_Programming\01_MMF" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.08_snack_list">
+  <component name="RunManager" selected="Python.08_snack_list_v2">
     <configuration default="false" name="07_string_analyser" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -210,23 +199,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="00_MMF_base_v2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="01_MMF" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/00_MMF_base_v2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="08_snack_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -239,7 +211,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="01_MMF" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/08_snack_list.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\lyh71709\OneDrive - Massey High School\Old School Files\Documents\COM_201\01_Programming\01_MMF\08_snack_list_v1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -257,6 +229,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="01_MMF" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/00_MMF_base_v3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="08_snack_list_v2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="01_MMF" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/08_snack_list_v2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -398,17 +387,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.07_string_analyser" />
       <item index="1" class="java.lang.String" itemvalue="Python.06_string_checker_v7" />
-      <item index="2" class="java.lang.String" itemvalue="Python.00_MMF_base_v2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.08_snack_list" />
-      <item index="4" class="java.lang.String" itemvalue="Python.00_MMF_base_v3" />
+      <item index="2" class="java.lang.String" itemvalue="Python.08_snack_list" />
+      <item index="3" class="java.lang.String" itemvalue="Python.00_MMF_base_v3" />
+      <item index="4" class="java.lang.String" itemvalue="Python.08_snack_list_v2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.08_snack_list" />
-        <item index="1" class="java.lang.String" itemvalue="Python.06_string_checker_v7" />
-        <item index="2" class="java.lang.String" itemvalue="Python.00_MMF_base_v3" />
-        <item index="3" class="java.lang.String" itemvalue="Python.07_string_analyser" />
-        <item index="4" class="java.lang.String" itemvalue="Python.00_MMF_base_v2" />
+        <item index="0" class="java.lang.String" itemvalue="Python.08_snack_list_v2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.08_snack_list" />
+        <item index="2" class="java.lang.String" itemvalue="Python.06_string_checker_v7" />
+        <item index="3" class="java.lang.String" itemvalue="Python.00_MMF_base_v3" />
+        <item index="4" class="java.lang.String" itemvalue="Python.07_string_analyser" />
       </list>
     </recent_temporary>
   </component>
@@ -427,7 +416,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="976" height="1056" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -485,20 +474,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/06_string_checker_v3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/00_MMF_base_v1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/06_string checker_v1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -792,13 +767,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07_string_analyser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/00_MMF_base_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="-670">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="e#20#29#0" expanded="true" />
@@ -810,30 +792,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/00_MMF_base_v3.py">
+    <entry file="file://$PROJECT_DIR$/08_snack_list_v1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
-          <folding>
-            <element signature="e#121#374#0" expanded="false" />
-            <element signature="e#430#750#0" expanded="false" />
-            <element signature="e#831#1080#0" expanded="false" />
-            <element signature="e#1145#1655#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/07_string_analyser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="894">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/06_string_checker_v7.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
+        <state relative-caret-position="17">
           <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
           <folding>
             <element signature="e#74#688#0" expanded="false" />
@@ -843,10 +812,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/08_snack_list.py">
+    <entry file="file://$PROJECT_DIR$/00_MMF_base_v3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="214">
+          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="129" selection-end-column="18" />
+          <folding>
+            <element signature="e#122#376#0" expanded="false" />
+            <element signature="e#432#753#0" expanded="false" />
+            <element signature="e#834#1083#0" expanded="false" />
+            <element signature="e#1148#1658#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/08_snack_list_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11_tickets_snacks_v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
           <folding />
         </state>
       </provider>
