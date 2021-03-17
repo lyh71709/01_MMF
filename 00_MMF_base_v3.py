@@ -1,9 +1,7 @@
 # import statements
-import re
-import pandas
+import re, pandas
 
 # functions go here
-
 
 # not_blank function here
 def not_blank(question):
