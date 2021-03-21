@@ -21,7 +21,7 @@ snack_menu_dict = {
 }
 
 test_data = [
-    [[2, 'Popcorn'], [1, 'Pita Chips'], [1, 'Orange Juice']],
+    [[2, 'Popcorn'], [1, 'Pita Chips'], [1, 'Orange Juice'], [1, 'Popcorn']],
     [[]],
     [[1, 'Water']],
     [[1, 'Popcorn'], [1, 'Orange Juice']],

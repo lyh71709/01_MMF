@@ -83,7 +83,7 @@ def get_snack():
 
         # check that snack is not the exit code before adding
         if snack_choice != "xxx" and snack_choice != "invalid choice":
-            snack_order.append(amount_snack)
+            snack_order.append(snack_row)
 
 # valid options for yes / no questions
 yes_no = [
@@ -109,8 +109,8 @@ if len(get_order) == 0:
 else:
     print("Snacks Ordered:")
 
-    '''for item in snack_order:
-        print(item)'''
+    #for item in snack_order:
+        #print(item)
         
     print(get_order)
 
