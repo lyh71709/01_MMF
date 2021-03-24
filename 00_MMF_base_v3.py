@@ -4,10 +4,8 @@ import pandas
 
 # functions go here
 
+
 # get_snack function goes here
-
-
-# Gets list of snacks
 def get_snack():
 
     # regular expression to find if item starts with a number
@@ -60,9 +58,6 @@ def get_snack():
 
         snack_row.append(amount)
         snack_row.append(snack_choice)
-
-        # add snack and amount to list
-        amount_snack = "{} {}".format(amount, snack_choice)
 
         # check that snack is not the exit code before adding
         if snack_choice != "xxx" and snack_choice != "invalid choice":
@@ -177,6 +172,7 @@ ticket_sales = 0
 # Initialise lists (to make data-frame in due course)
 all_names = []
 all_tickets = []
+surcharge_mult_list = []
 # valid options for yes / no questions
 yes_no = [
     ["yes", "y"],
@@ -202,7 +198,8 @@ movie_data_dict = {
     'Cwater': water,
     'Dpita Chips': pita_chips,
     'Em&ms': mms,
-    'Forange Juice': orange_juice
+    'Forange Juice': orange_juice,
+    'Surcharge_Multiplier': surcharge_mult_list
 }
 
 # cost of each snack
@@ -246,24 +243,26 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
 
     # Ensures that the snack is valid
     if check_snack == "Yes":
-        get_order = get_snack()
+        snack_order = get_snack()
     else:
-        get_order = []
+        snack_order = []
 
-    print(get_order)
+    print(snack_order)
+    print(snack_lists)
 
     count = 0
-    for client_order in get_order:
+    for client_order in snack_order:
 
         # Assume no snacks have been bought...
         for item in snack_lists:
             item.append(0)
 
-        # print(snack_lists)
-
-        # get order (hard coded for easy testing)
-        snack_order = get_order[count]
+        # get order
+        get_order = snack_order[count]
         count += 1
+
+        print(get_order)
+        print(client_order)
 
         for item in get_order:
             if len(item) > 0:
@@ -283,6 +282,8 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     else:
         surcharge_multiplier = 0
 
+    surcharge_mult_list.append(surcharge_multiplier)
+
 # End of tickets / snacks / payment loop
 
 # Print details
@@ -293,18 +294,38 @@ movie_frame = movie_frame.set_index('Name')
 # fill it price for snacks and tickets
 
 movie_frame["Sub Total"] = \
-    movie_frame['aTicket'] + \
-    movie_frame['bPopcorn']*price_dict['bPopcorn'] + \
-    movie_frame['cWater']*price_dict['cWater'] + \
-    movie_frame['dPita Chips']*price_dict['dPita Chips'] + \
-    movie_frame['eM&Ms']*price_dict['eM&Ms'] + \
-    movie_frame['fOrange Juice']*price_dict['fOrange Juice']
+    movie_frame['Aticket'] + \
+    movie_frame['Bpopcorn']*price_dict['Bpopcorn'] + \
+    movie_frame['Cwater']*price_dict['Cwater'] + \
+    movie_frame['Dpita Chips']*price_dict['Dpita Chips'] + \
+    movie_frame['Em&ms']*price_dict['Em&ms'] + \
+    movie_frame['Forange Juice']*price_dict['Forange Juice']
 
-# Shorten column names
-movie_frame = movie_frame.rename(columns={'aTicket': 'Ticket','bPopcorn': 'Popcorn', 'cWater': 'Water', 'dPita Chips': 'Chips', 'eM&Ms': 'M&Ms', 'fOrange Juice': 'OJ'})
+movie_frame["Surcharge"] = \
+    movie_frame["Sub Total"] * movie_frame["Surcharge_Multiplier"]
+
+movie_frame["Total"] = movie_frame["Sub Total"] + \
+    movie_frame['Surcharge']
+
+# redo column names
+movie_frame = movie_frame.rename(columns={'Aticket': 'Ticket','Bpopcorn': 'Popcorn',
+                                          'Cwater': 'Water', 'Dpita Chips': 'Chips',
+                                          'Em&ms': 'M&Ms', 'Forange Juice': 'OJ',
+                                          'Surcharge_Multiplier': 'SM'})
+
+# Set up columns to be printed...
+pandas.set_option('display.max_columns', None)
+
+# Display numbers to 2 dp...
+pandas.set_option('precision', 2)
+print_all = input("print all columns? ")
+check_print_all = string_checker(print_all, yes_no)
+if check_print_all == "Yes":
+    print(movie_frame)
+else:
+    print(movie_frame[['Ticket', 'Sub Total', 'Surcharge', 'Total']])
 
 print()
-print(movie_frame)
 
 # Calculate ticket profit
 ticket_profit = ticket_sales - (5 * ticket_count)
