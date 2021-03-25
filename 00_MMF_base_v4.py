@@ -182,6 +182,7 @@ pita_chips = []
 water = []
 orange_juice = []
 snack_lists = [popcorn, mms, pita_chips, water, orange_juice]
+surcharge_mult_list = []
 
 # Data Frame Dictionary
 movie_data_dict = {
@@ -192,6 +193,7 @@ movie_data_dict = {
     'Dpita Chips': pita_chips,
     'Em&ms': mms,
     'Forange Juice': orange_juice,
+    'Surcharge_Multiplier': surcharge_mult_list
 }
 
 # cost of each snack
@@ -251,6 +253,17 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
             add_list[-1] = amount
 
     # Get payment method (ie: work out if surcharge is needed
+    how_pay = "invalid choice"
+    while how_pay == "invalid choice":
+        how_pay = input("Please choose a payment method (cash or credit)? ").lower()
+        how_pay = string_checker(how_pay, pay_method)
+
+    if how_pay == "Credit":
+        surcharge_multipier = 0.05
+    else:
+        surcharge_multiplier = 0
+
+    surcharge_mult_list.append(surcharge_multiplier)
 
 # End of tickets / snacks / payment loop
 
@@ -268,6 +281,12 @@ movie_frame["Sub Total"] = \
     movie_frame['Dpita Chips']*price_dict['Dpita Chips'] + \
     movie_frame['Em&ms']*price_dict['Em&ms'] + \
     movie_frame['Forange Juice']*price_dict['Forange Juice']
+
+movie_frame["Surcharge"] = \
+    movie_frame["Sub Total"] * movie_frame["Surcharge_Multiplier"]
+
+movie_frame["Total"] = movie_frame["Sub Total"] + \
+    movie_frame['Surcharge']
 
 # Shorten column names
 movie_frame = movie_frame.rename(columns={'Aticket': 'Ticket','Bpopcorn': 'Popcorn', 'Cwater': 'Water', 'Dpita Chips': 'Chips', 'Em&ms': 'M&Ms', 'Forange Juice': 'OJ'})

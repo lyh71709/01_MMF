@@ -40,10 +40,9 @@ for client_order in test_data:
 
     # print(snack_lists)
 
-    print(snack_lists)
-
     # get order (hard coded for easy testing)
     snack_order = test_data[count]
+    print(test_data[count])
     count += 1
 
     for item in snack_order:
