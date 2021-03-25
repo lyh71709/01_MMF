@@ -171,6 +171,12 @@ ticket_sales = 0
 # Initialise lists (to make data-frame in due course)
 all_names = []
 all_tickets = []
+
+# valid pay methods
+pay_method = [
+    ["cash", "ca"],
+    ["credit", "cr"]
+]
 # valid options for yes / no questions
 yes_no = [
     ["yes", "y"],
@@ -259,7 +265,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
         how_pay = string_checker(how_pay, pay_method)
 
     if how_pay == "Credit":
-        surcharge_multipier = 0.05
+        surcharge_multiplier = 0.05
     else:
         surcharge_multiplier = 0
 
@@ -291,10 +297,18 @@ movie_frame["Total"] = movie_frame["Sub Total"] + \
 # Shorten column names
 movie_frame = movie_frame.rename(columns={'Aticket': 'Ticket','Bpopcorn': 'Popcorn', 'Cwater': 'Water', 'Dpita Chips': 'Chips', 'Em&ms': 'M&Ms', 'Forange Juice': 'OJ'})
 
-print()
-print(movie_frame)
+pandas.set_option('display.max_columns', None)
+
+pandas.set_option('precision', 2)
+
+print_all = input("Print all columns? ")
+if print_all == "y":
+    print(movie_frame)
+else:
+    print(movie_frame[['Ticket', 'Sub Total', 'Surcharge', 'Total']])
 
 print()
+
 
 # Calculate ticket profit
 ticket_profit = ticket_sales - (5 * ticket_count)
