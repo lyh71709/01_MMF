@@ -359,6 +359,8 @@ movie_frame["Sub-total"] = movie_frame["Ticket price"] + movie_frame["Snacks cos
 pandas.set_option("display.max_columns", None)
 pandas.set_option("expand_frame_repr", False)
 
+# Code - By Henry
+
 print()
 print(movie_frame)
 

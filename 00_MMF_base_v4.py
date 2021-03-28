@@ -280,13 +280,16 @@ movie_frame = movie_frame.set_index('Name')
 # create column called 'Sub Total'
 # fill it price for snacks and tickets
 
+movie_frame["Snacks"] = \
+    movie_frame['Bpopcorn'] * price_dict['Bpopcorn'] + \
+    movie_frame['Cwater'] * price_dict['Cwater'] + \
+    movie_frame['Dpita Chips'] * price_dict['Dpita Chips'] + \
+    movie_frame['Em&ms'] * price_dict['Em&ms'] + \
+    movie_frame['Forange Juice'] * price_dict['Forange Juice']
+
 movie_frame["Sub Total"] = \
     movie_frame['Aticket'] + \
-    movie_frame['Bpopcorn']*price_dict['Bpopcorn'] + \
-    movie_frame['Cwater']*price_dict['Cwater'] + \
-    movie_frame['Dpita Chips']*price_dict['Dpita Chips'] + \
-    movie_frame['Em&ms']*price_dict['Em&ms'] + \
-    movie_frame['Forange Juice']*price_dict['Forange Juice']
+    movie_frame['Snacks']
 
 movie_frame["Surcharge"] = \
     movie_frame["Sub Total"] * movie_frame["Surcharge_Multiplier"]
@@ -295,13 +298,16 @@ movie_frame["Total"] = movie_frame["Sub Total"] + \
     movie_frame['Surcharge']
 
 # Shorten column names
-movie_frame = movie_frame.rename(columns={'Aticket': 'Ticket','Bpopcorn': 'Popcorn', 'Cwater': 'Water', 'Dpita Chips': 'Chips', 'Em&ms': 'M&Ms', 'Forange Juice': 'OJ'})
+movie_frame = movie_frame.rename(columns={'Aticket': 'Ticket','Bpopcorn': 'Popcorn', 'Cwater': 'Water', 'Dpita Chips': 'Chips', 'Em&ms': 'M&Ms', 'Forange Juice': 'OJ', 'Surcharge_Multiplier': 'SM'})
 
-pandas.set_option('display.max_columns', None)
+pandas.set_option("display.max_columns", None)
 
 pandas.set_option('precision', 2)
 
 print_all = input("Print all columns? ")
+
+pandas.set_option("expand_frame_repr", False)
+
 if print_all == "y":
     print(movie_frame)
 else:
