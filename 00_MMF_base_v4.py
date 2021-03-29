@@ -182,6 +182,7 @@ yes_no = [
     ["yes", "y"],
     ["no", "n"]]
 
+
 popcorn = []
 mms = []
 pita_chips = []
@@ -189,6 +190,17 @@ water = []
 orange_juice = []
 snack_lists = [popcorn, mms, pita_chips, water, orange_juice]
 surcharge_mult_list = []
+
+# Lists to store summary data...
+summary_headings = ["Popcorn", "M&M's", "Pita Chips", "Water",
+                    "Orange Juice", "Snack Profit", "Ticket Profit", "Total Profit"]
+
+summary_data = []
+
+summary_data_dict = {
+    'Item': summary_headings,
+    'Amount': summary_data
+}
 
 # Data Frame Dictionary
 movie_data_dict = {
@@ -298,10 +310,33 @@ movie_frame["Total"] = movie_frame["Sub Total"] + \
     movie_frame['Surcharge']
 
 # Shorten column names
-movie_frame = movie_frame.rename(columns={'Aticket': 'Ticket','Bpopcorn': 'Popcorn', 'Cwater': 'Water', 'Dpita Chips': 'Chips', 'Em&ms': 'M&Ms', 'Forange Juice': 'OJ', 'Surcharge_Multiplier': 'SM'})
+movie_frame = movie_frame.rename(columns={'Aticket': 'Ticket', 'Bpopcorn': 'Popcorn',
+                                          'Cwater': 'Water', 'Dpita Chips': 'Chips',
+                                          'Em&ms': 'M&Ms', 'Forange Juice': 'OJ',
+                                          'Surcharge_Multiplier': 'SM'})
+# Set up summary dataframe
+# populate snack items
+for item in snack_lists:
+    # sum items in each snack list
+    summary_data.append(sum(item))
 
+# Get snack profit
+# Get snack total from panda
+snack_total = movie_frame['Snacks'].sum()
+snack_profit = snack_total * 0.2
+summary_data.append(snack_profit)
+
+# Get ticket profit
+ticket_profit = ticket_sales - (5 * ticket_count)
+summary_data.append(ticket_price)
+
+total_profit = snack_profit + ticket_profit
+summary_data.append(total_profit)
+
+# Set up columns to be printed
 pandas.set_option("display.max_columns", None)
 
+# Display numbers to 2 dp
 pandas.set_option('precision', 2)
 
 print_all = input("Print all columns? ")
@@ -316,9 +351,7 @@ else:
 print()
 
 
-# Calculate ticket profit
-ticket_profit = ticket_sales - (5 * ticket_count)
-print("\nProfit from Tickets: ${:.2f}".format(ticket_profit))
+
 
 # Gives feedback after loop has ended
 if ticket_count == MAX_TICKETS:
