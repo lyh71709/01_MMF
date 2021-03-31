@@ -20,7 +20,7 @@ def get_snack():
     valid_snacks = [["bPopcorn", "popcorn", "p", "corn", "a"],
                     ["eM&Ms", "M&M's", "m&m's", "mms", "m", "b"],
                     ["dPita Chips", "pita chips", "chips", "pc", "pita", "c"],
-                    ["cWater", "water", "w", "d"],
+                    ["cWater", "water", "h20", "w", "d"],
                     ["fOrange Juice", "orange juice", "oj", "o", "juice", "e"]]
 
     # holds snack order fpr a single user
@@ -333,25 +333,26 @@ summary_data.append(ticket_price)
 total_profit = snack_profit + ticket_profit
 summary_data.append(total_profit)
 
+# Create summary frame
+summary_frame = pandas.DataFrame(summary_data_dict)
+summary_frame = summary_frame.set_index('Item')
+
 # Set up columns to be printed
 pandas.set_option("display.max_columns", None)
 
 # Display numbers to 2 dp
 pandas.set_option('precision', 2)
 
-print_all = input("Print all columns? ")
-
-pandas.set_option("expand_frame_repr", False)
-
-if print_all == "y":
-    print(movie_frame)
-else:
-    print(movie_frame[['Ticket', 'Sub Total', 'Surcharge', 'Total']])
-
+print()
+print("*** Ticket / Snack Information ***")
+print("Note: for full details, please see the excel file called")
+print()
+print(movie_frame[['Ticket', 'Snacks', 'Sub Total', 'Surcharge', 'Total']])
 print()
 
-
-
+print("*** Snack / Profit Summary ***")
+print()
+print(summary_frame)
 
 # Gives feedback after loop has ended
 if ticket_count == MAX_TICKETS:
