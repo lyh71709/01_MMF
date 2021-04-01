@@ -17,7 +17,7 @@ def get_snack():
     # letter code (a - e), and possible abbreviations etc>
 
     # Has all valid snacks that a user can get
-    valid_snacks = [["bPopcorn", "popcorn", "p", "corn", "a"],
+    valid_snacks = [["bPopcorn", "popcorn", "p", "pop", "corn", "a"],
                     ["eM&Ms", "M&M's", "m&m's", "mms", "m", "b"],
                     ["dPita Chips", "pita chips", "chips", "pc", "pita", "c"],
                     ["cWater", "water", "h20", "w", "d"],
@@ -209,7 +209,7 @@ movie_data_dict = {
     'Bpopcorn': popcorn,
     'Cwater': water,
     'Dpita Chips': pita_chips,
-    'Em&ms': mms,
+    'Em&Ms': mms,
     'Forange Juice': orange_juice,
     'Surcharge_Multiplier': surcharge_mult_list
 }
@@ -219,7 +219,7 @@ price_dict = {
     'Bpopcorn': 2.5,
     'Cwater': 2,
     'Dpita Chips': 4.5,
-    'Em&ms': 3,
+    'Em&Ms': 3,
     'Forange Juice': 3.25
 }
 
@@ -248,16 +248,7 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     all_tickets.append(ticket_price)
 
     # Get snacks
-    check_snack = "invalid choice"
-    while check_snack == "invalid choice":
-        want_snack = input("Do you want to order snacks? ").lower()
-        check_snack = string_checker(want_snack, yes_no)
-
-    # Ensures that the snack is valid
-    if check_snack == "Yes":
-        snack_order = get_snack()
-    else:
-        snack_order = []
+    snack_order = get_snack()
 
     # Assume no snacks have been bought...
     for item in snack_lists:
@@ -296,7 +287,7 @@ movie_frame["Snacks"] = \
     movie_frame['Bpopcorn'] * price_dict['Bpopcorn'] + \
     movie_frame['Cwater'] * price_dict['Cwater'] + \
     movie_frame['Dpita Chips'] * price_dict['Dpita Chips'] + \
-    movie_frame['Em&ms'] * price_dict['Em&ms'] + \
+    movie_frame['Em&Ms'] * price_dict['Em&Ms'] + \
     movie_frame['Forange Juice'] * price_dict['Forange Juice']
 
 movie_frame["Sub Total"] = \
@@ -312,7 +303,7 @@ movie_frame["Total"] = movie_frame["Sub Total"] + \
 # Shorten column names
 movie_frame = movie_frame.rename(columns={'Aticket': 'Ticket', 'Bpopcorn': 'Popcorn',
                                           'Cwater': 'Water', 'Dpita Chips': 'Chips',
-                                          'Em&ms': 'M&Ms', 'Forange Juice': 'OJ',
+                                          'Em&Ms': 'M&Ms', 'Forange Juice': 'OJ',
                                           'Surcharge_Multiplier': 'SM'})
 # Set up summary dataframe
 # populate snack items
