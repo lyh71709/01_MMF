@@ -160,6 +160,10 @@ def get_ticket_price():
     return ticket_price
 
 
+# currency function goes here
+def currency(x):
+    return "${:.2f}".format(x)
+
 # Main routine
 
 # Set up dictionaries / lists needed to hold data
@@ -317,14 +321,22 @@ for item in snack_lists:
 # Get snack total from panda
 snack_total = movie_frame['Snacks'].sum()
 snack_profit = snack_total * 0.2
-summary_data.append(snack_profit)
 
 # Get ticket profit
 ticket_profit = ticket_sales - (5 * ticket_count)
-summary_data.append(ticket_price)
 
+# Get total profit
 total_profit = snack_profit + ticket_profit
+
+# format dollar amount and add to list...
+dollar_amounts = [snack_profit, ticket_profit, total_profit]
+for item in dollar_amounts:
+    item = "${:.2f}".format(item)
+    summary_data.append(item)
+
 summary_data.append(total_profit)
+summary_data.append(snack_profit)
+summary_data.append(ticket_price)
 
 # Create summary frame
 summary_frame = pandas.DataFrame(summary_data_dict)
@@ -332,6 +344,19 @@ summary_frame = summary_frame.set_index('Item')
 
 # Set up columns to be printed
 pandas.set_option("display.max_columns", None)
+
+
+# Pre Printing / Esports
+# Format currency value so they have $'s
+
+# Ticket details formatting (uses currency function)
+add_dollars = ['Ticket', ' Snacks', 'Surcharge', 'Total', 'Sub Total']
+for item in add_dollars:
+    movie_frame[item] = movie_frame[item].apply(currency)
+
+# Write each frame to a separate csv files
+movie_frame.to_csv("ticket_details.csv")
+summary_frame.to_csv("snack_summary.csv")
 
 # Display numbers to 2 dp
 pandas.set_option('precision', 2)
