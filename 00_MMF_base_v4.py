@@ -17,11 +17,11 @@ def get_snack():
     # letter code (a - e), and possible abbreviations etc>
 
     # Has all valid snacks that a user can get
-    valid_snacks = [["bPopcorn", "popcorn", "p", "pop", "corn", "a"],
-                    ["eM&Ms", "M&M's", "m&m's", "mms", "m", "b"],
-                    ["dPita Chips", "pita chips", "chips", "pc", "pita", "c"],
-                    ["cWater", "water", "h20", "w", "d"],
-                    ["fOrange Juice", "orange juice", "oj", "o", "juice", "e"]]
+    valid_snacks = [["popcorn", "p", "pop", "corn", "a"],
+                    ["M&M's", "m&m's", "mms", "m", "b"],
+                    ["pita chips", "chips", "pc", "pita", "c"],
+                    ["water", "h20", "w", "d"],
+                    ["orange juice", "oj", "o", "juice", "e"]]
 
     # holds snack order fpr a single user
     snack_order = []
@@ -193,7 +193,8 @@ surcharge_mult_list = []
 
 # Lists to store summary data...
 summary_headings = ["Popcorn", "M&M's", "Pita Chips", "Water",
-                    "Orange Juice", "Snack Profit", "Ticket Profit", "Total Profit"]
+                    "Orange Juice", "Snack Profit", "Ticket Profit",
+                    "Total Profit"]
 
 summary_data = []
 
@@ -205,22 +206,22 @@ summary_data_dict = {
 # Data Frame Dictionary
 movie_data_dict = {
     'Name': all_names,
-    'Aticket': all_tickets,
-    'Bpopcorn': popcorn,
-    'Cwater': water,
-    'Dpita Chips': pita_chips,
-    'Em&Ms': mms,
-    'Forange Juice': orange_juice,
+    'Ticket': all_tickets,
+    'Popcorn': popcorn,
+    'Water': water,
+    'Pita Chips': pita_chips,
+    'M&Ms': mms,
+    'Orange Juice': orange_juice,
     'Surcharge_Multiplier': surcharge_mult_list
 }
 
 # cost of each snack
 price_dict = {
-    'Bpopcorn': 2.5,
-    'Cwater': 2,
-    'Dpita Chips': 4.5,
-    'Em&Ms': 3,
-    'Forange Juice': 3.25
+    'Popcorn': 2.5,
+    'Water': 2,
+    'Pita Chips': 4.5,
+    'M&Ms': 3,
+    'Orange Juice': 3.25
 }
 
 # Get name (can't be blank)
@@ -246,8 +247,6 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     # Add name and ticket price to lists
     all_names.append(name)
     all_tickets.append(ticket_price)
-
-
 
     # Get snacks
     snack_order = get_snack()
@@ -286,14 +285,14 @@ movie_frame = movie_frame.set_index('Name')
 # fill it price for snacks and tickets
 
 movie_frame["Snacks"] = \
-    movie_frame['Bpopcorn'] * price_dict['Bpopcorn'] + \
-    movie_frame['Cwater'] * price_dict['Cwater'] + \
-    movie_frame['Dpita Chips'] * price_dict['Dpita Chips'] + \
-    movie_frame['Em&Ms'] * price_dict['Em&Ms'] + \
-    movie_frame['Forange Juice'] * price_dict['Forange Juice']
+    movie_frame['Popcorn'] * price_dict['Popcorn'] + \
+    movie_frame['Water'] * price_dict['Water'] + \
+    movie_frame['Pita Chips'] * price_dict['Pita Chips'] + \
+    movie_frame['M&Ms'] * price_dict['M&Ms'] + \
+    movie_frame['Orange Juice'] * price_dict['Orange Juice']
 
 movie_frame["Sub Total"] = \
-    movie_frame['Aticket'] + \
+    movie_frame['Ticket'] + \
     movie_frame['Snacks']
 
 movie_frame["Surcharge"] = \
@@ -303,9 +302,8 @@ movie_frame["Total"] = movie_frame["Sub Total"] + \
     movie_frame['Surcharge']
 
 # Shorten column names
-movie_frame = movie_frame.rename(columns={'Aticket': 'Ticket', 'Bpopcorn': 'Popcorn',
-                                          'Cwater': 'Water', 'Dpita Chips': 'Chips',
-                                          'Em&Ms': 'M&Ms', 'Forange Juice': 'OJ',
+movie_frame = movie_frame.rename(columns={'Pita Chips': 'Chips',
+                                          'Orange juice': 'OJ',
                                           'Surcharge_Multiplier': 'SM'})
 # Set up summary dataframe
 # populate snack items

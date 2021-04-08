@@ -12,5 +12,6 @@ def not_blank(question):
             print("Sorry - this can't be blank")
             print()
 
+
 # Main Routine
 name = not_blank("What is your name? ")
