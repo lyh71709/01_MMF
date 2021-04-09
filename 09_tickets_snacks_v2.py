@@ -1,4 +1,5 @@
 # Version 2 I added a letter in front of the variables so when it displays it won't be altered into alphabetical order
+# This was made irrevelant by the use of Visual Studio Code
 
 import pandas
 
@@ -73,14 +74,14 @@ movie_frame = movie_frame.set_index('Name')
 
 movie_frame["Sub Total"] = \
     movie_frame['aTicket'] + \
-    movie_frame['bPopcorn']*price_dict['bPopcorn'] + \
-    movie_frame['cWater']*price_dict['cWater'] + \
-    movie_frame['dPita Chips']*price_dict['dPita Chips'] + \
-    movie_frame['eM&Ms']*price_dict['eM&Ms'] + \
-    movie_frame['fOrange Juice']*price_dict['fOrange Juice']
+    movie_frame['bPopcorn'] * price_dict['bPopcorn'] + \
+    movie_frame['cWater'] * price_dict['cWater'] + \
+    movie_frame['dPita Chips'] * price_dict['dPita Chips'] + \
+    movie_frame['eM&Ms'] * price_dict['eM&Ms'] + \
+    movie_frame['fOrange Juice'] * price_dict['fOrange Juice']
 
 # Shorten column names
-movie_frame = movie_frame.rename(columns={'aTicket': 'Ticket','bPopcorn': 'Popcorn', 'cWater': 'Water', 'dPita Chips': 'Chips', 'eM&Ms': 'M&Ms', 'fOrange Juice': 'OJ'})
+movie_frame = movie_frame.rename(columns={'aTicket': 'Ticket', 'bPopcorn': 'Popcorn', 'cWater': 'Water', 'dPita Chips': 'Chips', 'eM&Ms': 'M&Ms', 'fOrange Juice': 'OJ'})
 
 print()
 print(movie_frame)

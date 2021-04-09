@@ -24,6 +24,7 @@ def string_checker(choice, options):
         print("Please enter a valid option\n")
         return "invalid choice"
 
+
 # valid snacks holds list of all snacks
 # Each item in valid snacks is a list
 # with valid options for each snack <full name,
@@ -77,5 +78,3 @@ else:
 
     for item in snack_order:
         print(item)
-
-

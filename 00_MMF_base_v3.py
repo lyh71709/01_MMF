@@ -1,3 +1,5 @@
+# Letters done in front of snacks because I was using pycharm at this point in time.
+
 # import statements
 import re
 import pandas
@@ -263,14 +265,14 @@ movie_frame = movie_frame.set_index('Name')
 
 movie_frame["Sub Total"] = \
     movie_frame['Aticket'] + \
-    movie_frame['Bpopcorn']*price_dict['Bpopcorn'] + \
-    movie_frame['Cwater']*price_dict['Cwater'] + \
-    movie_frame['Dpita Chips']*price_dict['Dpita Chips'] + \
-    movie_frame['Em&ms']*price_dict['Em&ms'] + \
-    movie_frame['Forange Juice']*price_dict['Forange Juice']
+    movie_frame['Bpopcorn'] * price_dict['Bpopcorn'] + \
+    movie_frame['Cwater'] * price_dict['Cwater'] + \
+    movie_frame['Dpita Chips'] * price_dict['Dpita Chips'] + \
+    movie_frame['Em&ms'] * price_dict['Em&ms'] + \
+    movie_frame['Forange Juice'] * price_dict['Forange Juice']
 
 # Shorten column names
-movie_frame = movie_frame.rename(columns={'Aticket': 'Ticket','Bpopcorn': 'Popcorn', 'Cwater': 'Water', 'Dpita Chips': 'Chips', 'Em&ms': 'M&Ms', 'Forange Juice': 'OJ'})
+movie_frame = movie_frame.rename(columns={'Aticket': 'Ticket', 'Bpopcorn': 'Popcorn', 'Cwater': 'Water', 'Dpita Chips': 'Chips', 'Em&ms': 'M&Ms', 'Forange Juice': 'OJ'})
 
 print()
 print(movie_frame)

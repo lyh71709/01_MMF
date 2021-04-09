@@ -71,11 +71,11 @@ movie_frame = movie_frame.set_index('Name')
 
 movie_frame["Sub Total"] = \
     movie_frame['Ticket'] + \
-    movie_frame['Popcorn']*price_dict['Popcorn'] + \
-    movie_frame['Water']*price_dict['Water'] + \
-    movie_frame['Pita Chips']*price_dict['Pita Chips'] + \
-    movie_frame['M&Ms']*price_dict['M&Ms'] + \
-    movie_frame['Orange Juice']*price_dict['Orange Juice']
+    movie_frame['Popcorn'] * price_dict['Popcorn'] + \
+    movie_frame['Water'] * price_dict['Water'] + \
+    movie_frame['Pita Chips'] * price_dict['Pita Chips'] + \
+    movie_frame['M&Ms'] * price_dict['M&Ms'] + \
+    movie_frame['Orange Juice'] * price_dict['Orange Juice']
 
 # Shorten column names
 movie_frame = movie_frame.rename(columns={'Pita Chips': 'Chips', 'Orange Juice': 'OJ'})

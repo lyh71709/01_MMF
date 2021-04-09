@@ -25,6 +25,7 @@ def string_checker(choice, options):
         print("Please enter a valid option\n")
         return "invalid choice"
 
+
 # regular expression to find if item starts with a number
 number_regex = "^[1-9]"
 
@@ -73,7 +74,7 @@ if check_snack == "Yes":
 
         else:
             amount = 1
-            desired_snack = desired_snack # Can't argue with that
+            desired_snack = desired_snack  # Can't argue with that
 
         # remove white space around snack
         desired_snack = desired_snack.strip()
@@ -106,5 +107,3 @@ else:
         print(item)
 
     print(snack_order)
-
-

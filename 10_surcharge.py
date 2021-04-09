@@ -1,4 +1,6 @@
-import re, pandas
+import re
+import pandas
+
 
 # Function goes here
 # WARNING: The response is returned in Title Case

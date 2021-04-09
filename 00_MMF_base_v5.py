@@ -343,16 +343,16 @@ pandas.set_option("display.max_columns", None)
 # Format currency value so they have $'s
 
 # Ticket details formatting (uses currency function)
-add_dollars = ['Ticket', ' Snacks', 'Surcharge', 'Total', 'Sub Total']
+add_dollars = ['Ticket', 'Snacks', 'Surcharge', 'Total', 'Sub Total']
 for item in add_dollars:
     movie_frame[item] = movie_frame[item].apply(currency)
 
 # Write each frame to a separate csv files
-movie_frame.to_csv("ticket_details.csv")
+movie_frame[['Ticket', 'Popcorn', 'Water', 'Chips',
+             'M&Ms', 'OJ', 'SM',
+             'Snacks', 'Sub Total', 'Surcharge',
+             'Total']].to_csv("ticket_details.csv")
 summary_frame.to_csv("snack_summary.csv")
-
-# Display numbers to 2 dp
-pandas.set_option('precision', 2)
 
 print()
 print("*** Ticket / Snack Information ***")

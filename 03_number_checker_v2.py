@@ -18,5 +18,6 @@ def int_check(question):
         except ValueError:
             print(error)
 
+
 # Main routine
 age = int_check("How old are you? ")

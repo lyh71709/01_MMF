@@ -3,12 +3,12 @@ profit = 0
 name = ""
 while name != "xxx":
 
-    name = input("Name: ") # replace with function
+    name = input("Name: ")  # replace with function
 
     if name == "xxx":
         break
 
-    age = int(input("Age: ")) # replace with function
+    age = int(input("Age: "))  # replace with function
 
     if age < 16:
         ticket_price = 7.5

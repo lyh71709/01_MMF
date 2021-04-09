@@ -17,11 +17,12 @@ def string_checker(choice, options):
         else:
             is_valid = "no"
 
-    #if snack is not OK - ask question again
+    # if snack is not OK - ask question again
     if is_valid == "yes":
         return chosen
     else:
         return "invalid choice"
+
 
 # valid snacks holds list of all snacks
 # Each item in valid snacks is a list
@@ -35,7 +36,8 @@ valid_snacks = [["popcorn", "p", "corn", "a"],
 
 yes_no = [
     ["yes", "y"],
-    ["no", "n"],]
+    ["no", "n"]
+]
 
 check_snack = "invalid choice"
 while check_snack == "invalid choice":

@@ -25,6 +25,7 @@ def string_checker(choice, options):
         print("Please enter a valid option\n")
         return "invalid choice"
 
+
 # Gets list of snacks
 def get_snack():
 
@@ -85,6 +86,7 @@ def get_snack():
         if snack_choice != "xxx" and snack_choice != "invalid choice":
             snack_order.append(snack_row)
 
+
 # valid options for yes / no questions
 yes_no = [
     ["yes", "y"],
@@ -108,10 +110,4 @@ if len(get_order) == 0:
     print("Snacks Ordered: None")
 else:
     print("Snacks Ordered:")
-
-    #for item in snack_order:
-        #print(item)
-        
     print(get_order)
-
-

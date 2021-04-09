@@ -1,6 +1,6 @@
 # function goes here
 
-def int_check(question,low_num,high_num):
+def int_check(question, low_num, high_num):
 
     error = "Please enter a whole number between {} and {}".format(low_num, high_num)
 
@@ -17,6 +17,7 @@ def int_check(question,low_num,high_num):
 
         except ValueError:
             print(error)
+
 
 # Main routine
 age = int_check("How old are you? ", 12, 130)
