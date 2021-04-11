@@ -14,6 +14,8 @@ def not_blank(question, error):
         else:
             print(error)
             print()
+
+
 # int_check function here
 def int_check(question):
 
@@ -33,9 +35,10 @@ def int_check(question):
         except ValueError:
             print(error)
 
+
 # Main rountine
 
-#Set up dictionaries / lists needed to hold data
+# Set up dictionaries / lists needed to hold data
 MAX_TICKETS = 5
 name = ""
 ticket_count = 0

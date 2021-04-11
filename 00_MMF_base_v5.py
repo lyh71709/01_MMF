@@ -254,7 +254,16 @@ while name != "xxx" and ticket_count < MAX_TICKETS:
     all_tickets.append(ticket_price)
 
     # Get snacks
-    snack_order = get_snack()
+    check_snack = "invalid choice"
+    while check_snack == "invalid choice":
+        want_snack = input("Do you want to order snacks? ").lower()
+        check_snack = string_checker(want_snack, yes_no)
+
+    # Ensures that the snack is valid
+    if check_snack == "Yes":
+        snack_order = get_snack()
+    else:
+        snack_order = []
 
     # Assume no snacks have been bought...
     for item in snack_lists:

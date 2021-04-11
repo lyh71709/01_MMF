@@ -1,2 +1,3 @@
 Name,Ticket,Popcorn,Water,Chips,M&Ms,OJ,SM,Snacks,Sub Total,Surcharge,Total
-Henry,$10.50,0,0,2,0,0,0,$9.00,$19.50,$0.00,$19.50
+Henry,$10.50,0,0,2,0,0,0.0,$9.00,$19.50,$0.00,$19.50
+JT,$7.50,0,2,0,0,0,0.05,$4.00,$11.50,$0.58,$12.07
