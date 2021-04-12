@@ -28,17 +28,24 @@ def instructions(options):
     show_help = "invalid choice"
     while show_help == "invalid choice":
         show_help = input("Would you like to read the instructions? ")
-        show_help = string_check(show_help, options)
+        show_help = string_checker(show_help, options)
 
     if show_help == "Yes":
         print()
         print("Mega Movie Fundraiser Instructions")
         print()
         print("1. Cannot cancel order (NO REFUNDS!)\n2. Enter 'xxx' in to skip or cancel the question")
-        print("3. When ordering snacks if you want more than one of a snack put the number in front (For example 3pita chips or 3 water")
-        print("======== Pricing ========")
-        print("Minor Ticket(12 - 16yrs) - $7.50)
-        print("Adult Ticket(16 - 65)")
+        print("3. When ordering snacks if you want more than one of a snack put the number in front (For example 3pita chips or 3 water)")
+        print("\n======== Pricing ========")
+        print("Minor Ticket (12 - 16yrs) - $7.50")
+        print("Adult Ticket (16 - 65yrs) - $10.50")
+        print("Senior Ticket (66 - 130yrs) - $ 6.50")
+        print("-------------------------------------")
+        print("Popcorn - $2.50")
+        print("M&M's - $2.00")
+        print("Pita Chips - $4.50")
+        print("Water - $3.00")
+        print("Orange Juice - $3.25")
 
     return ""
 

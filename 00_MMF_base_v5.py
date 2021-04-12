@@ -5,6 +5,33 @@ import pandas
 # functions go here
 
 
+# instructions function goes here
+def instructions(options):
+    show_help = "invalid choice"
+    while show_help == "invalid choice":
+        show_help = input("Would you like to read the instructions? ")
+        show_help = string_checker(show_help, options)
+
+    if show_help == "Yes":
+        print()
+        print("Mega Movie Fundraiser Instructions")
+        print()
+        print("1. Cannot cancel order (NO REFUNDS!)\n2. Enter 'xxx' in to skip or cancel the question")
+        print("3. When ordering snacks if you want more than one of a snack put the number in front (For example 3pita chips or 3 water)")
+        print("\n======== Pricing ========")
+        print("Minor Ticket (12 - 16yrs) - $7.50")
+        print("Adult Ticket (16 - 65yrs) - $10.50")
+        print("Senior Ticket (66 - 130yrs) - $ 6.50")
+        print("-------------------------------------")
+        print("Popcorn - $2.50")
+        print("M&M's - $2.00")
+        print("Pita Chips - $4.50")
+        print("Water - $3.00")
+        print("Orange Juice - $3.25")
+
+    return ""
+
+
 # get_snack function goes here
 def get_snack():
 
@@ -18,7 +45,7 @@ def get_snack():
 
     # Has all valid snacks that a user can get
     valid_snacks = [["popcorn", "p", "pop", "corn", "a"],
-                    ["M&M's", "m&m's", "mms", "m", "b"],
+                    ["M&Ms", "m&ms", "mms", "m", "b"],
                     ["pita chips", "chips", "pc", "pita", "c"],
                     ["water", "h20", "w", "d"],
                     ["orange juice", "oj", "o", "juice", "e"]]
@@ -165,8 +192,6 @@ def currency(x):
     return "${:.2f}".format(x)
 
 
-# Main routine
-
 # Set up dictionaries / lists needed to hold data
 MAX_TICKETS = 5
 name = ""
@@ -197,7 +222,7 @@ snack_lists = [popcorn, mms, pita_chips, water, orange_juice]
 surcharge_mult_list = []
 
 # Lists to store summary data...
-summary_headings = ["Popcorn", "M&M's", "Pita Chips", "Water",
+summary_headings = ["Popcorn", "M&Ms", "Pita Chips", "Water",
                     "Orange Juice", "Snack Profit",
                     "Ticket Profit", "Total Profit"]
 
@@ -228,6 +253,11 @@ price_dict = {
     'M&Ms': 3,
     'Orange Juice': 3.25
 }
+
+# Main routine
+# Instructions here
+instructions(yes_no)
+print()
 
 # Get name (can't be blank)
 while name != "xxx" and ticket_count < MAX_TICKETS:
