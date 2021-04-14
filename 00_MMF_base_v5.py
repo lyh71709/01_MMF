@@ -193,7 +193,7 @@ def currency(x):
 
 
 # Set up dictionaries / lists needed to hold data
-MAX_TICKETS = 5
+MAX_TICKETS = 50
 name = ""
 ticket_count = 0
 ticket_sales = 0
